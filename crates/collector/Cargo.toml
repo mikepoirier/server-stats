@@ -1,0 +1,12 @@
+[package]
+name = "collector"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+metrics_core = { workspace = true }
+tokio = { workspace = true, features = ["full"] }
+tonic = { workspace = true }
+thiserror = { workspace = true }
+tracing = { workspace = true, features = ["log"] }
+tracing-subscriber = { workspace = true, features = ["env-filter"] }

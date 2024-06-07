@@ -1,0 +1,36 @@
+syntax = "proto3";
+
+package metrics_core;
+
+service MetricsService {
+    rpc RequestMetrics(MetricsRequest) returns (MetricsResponse);
+}
+
+message Memory {
+    uint64 mem_total = 1;
+    uint64 mem_free = 2;
+    uint64 mem_available = 3;
+    uint64 buffers = 4;
+    uint64 cached = 5;
+}
+
+message MetricsResponse {
+    string host = 1;
+    float cpu_usage = 2;
+    Memory memory = 3;
+    uint64 net_usage = 4;
+}
+
+message MetricsRequest {}
+
+service RegistrationService {
+    rpc Register(RegistrationRequest) returns (RegistrationResponse);
+}
+
+message RegistrationRequest {
+    string port = 1;
+}
+
+message RegistrationResponse {
+    string status = 1;
+}

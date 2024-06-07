@@ -1,0 +1,13 @@
+[package]
+name = "web"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+axum = { workspace = true, features = ["form", "macros"] }
+maud = { workspace = true }
+metrics_core = { workspace = true }
+tokio = { workspace = true, features = ["full"] }
+tonic = { workspace = true }
+tracing = { workspace = true, features = ["log"] }
+tracing-subscriber = { workspace = true, features = ["env-filter"] }

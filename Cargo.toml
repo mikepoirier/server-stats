@@ -1,0 +1,15 @@
+[workspace]
+resolver = "2"
+members = ["crates/*"]
+
+[workspace.dependencies]
+axum = { version = "0.7.5" }
+maud = "0.26"
+metrics_core = { path = "crates/metrics_core" }
+prost = "0.12"
+tokio = { version = "1.38.0" }
+tonic = "0.11.0"
+thiserror = "1"
+tonic-build = "0.11.0"
+tracing = { version = "0.1.40" }
+tracing-subscriber = { version = "0.3.18" }

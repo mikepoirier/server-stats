@@ -1,0 +1,11 @@
+[package]
+name = "metrics_core"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+prost = { workspace = true }
+tonic = { workspace = true, features = ["prost"] }
+
+[build-dependencies]
+tonic-build = { workspace = true, features = ["prost"] }
